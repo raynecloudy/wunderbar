@@ -26,6 +26,8 @@ i.close();
 await mkdir(join(wd, name), {
   recursive: true
 });
+await mkdir(join(wd, name, "web"));
+await mkdir(join(wd, name, "server"));
 await writeFile(join(wd, name, "package.json"), JSON.stringify({
   name,
   description,
@@ -34,5 +36,7 @@ await writeFile(join(wd, name, "package.json"), JSON.stringify({
   author
 }));
 await writeFile(join(wd, name, "wbconfig.json"), JSON.stringify({
-  output: "build"
+  hostName: "localhost",
+  output: "build",
+  port: 3000
 }));
