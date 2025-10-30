@@ -1,6 +1,16 @@
 {
   "name": "wunderbar",
+  "description": "a very wunderbar web framework!",
   "version": "1.0.0",
   "type": "module",
-  "license": "ISC"
+  "license": "ISC",
+  "bin": {
+    "wbc": "src/compile.js"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "commander": "^14.0.2"
+  }
 }
